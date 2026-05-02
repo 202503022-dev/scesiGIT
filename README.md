@@ -61,10 +61,66 @@ fix → error
 docs → documentación
 refactor → mejora interna
 ## clase D3
-### titulo:
+### titulo: github 
+que es? 
+GitHub es una plataforma en internet donde los desarrolladores pueden guardar sus proyectos de programación, organizarlos y trabajar en equipo con otras personas. Funciona como una especie de red social para programadores
+
+Diferebcia con git:
+Git = herramienta para guardar cambios
+GitHub = plataforma para subir y compartir esos cambios
+
+para conectar con un repositorio con https cada vez nos pide una clave o keys, para lo cual usaremos un ssh, que configiramos en la laptop desde el repositorio de github
+
 ## clase D4 
-###titulo:
+### titulo:
+Git remote es el comando que se usa para manejar las conexiones entre tu repositorio local (el de tu computadora) y los repositorios remotos (como los que están en la nube). Básicamente, le indica a Git de dónde traer información o a dónde enviarla.
+
+Comandos importantes:
+
+git remote -v
+Muestra las direcciones (URLs) de los repositorios remotos vinculados.
+
+git remote add <apodo> "url"
+Sirve para conectar tu repositorio local con uno remoto. El apodo suele ser “origin”.
+
+git remote set-url <apodo> "url"
+Permite cambiar la dirección del repositorio remoto al que estás conectado.
+
+
 ## clase D5
-###titulo:
+### titulo: Git Flow
+¿Qué son las ramas en Git?
+Las ramas son una herramienta que permite trabajar en diferentes versiones de un mismo proyecto al mismo tiempo
+
+Ramas principales
+### Main (o master)
+Es la rama más importante.
+Contiene el código listo, estable y terminado (el que ya se puede usar o entregar)
+ Nunca debería tener errores.
+### Develop
+Es la rama donde se juntan todos los cambios antes de pasar a main.
+Aquí se prueba y se integra todo lo nuevo.
+ Es como una “zona de preparación”.
+### Ramas de apoyo
+Feature (feature/...)
+Se usan para crear nuevas funciones.
+Nacen desde develop
+Cuando terminas, vuelven a develop
+ Ejemplo: feature/login
+
+Release (release/...)
+Se usan para preparar una versión final.
+Nacen desde develop
+Se ajustan detalles finales (bugs pequeños, config)
+Luego pasan a main y también a develop
+ Ejemplo: release/v1.0
+
+Hotfix (hotfix/...)
+Se usan para arreglar errores urgentes en producción.
+Nacen desde main
+Se corrige rápido
+Luego vuelve a main y también a develop
+ Ejemplo: hotfix/error-login
 ## clase D6
-###titulo:
+### titulo:
+## clase D7
