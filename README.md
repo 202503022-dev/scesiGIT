@@ -1,6 +1,6 @@
 # scesiGIT
 ## clase D1
-##titulo: Introduccion
+## titulo: Introduccion
 git es un sistema de controles de verssion distribuidio
    permite guardar versones de un proyeto y permite contribuciones
    fue creado por Linux Torbax 
