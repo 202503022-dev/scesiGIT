@@ -124,3 +124,49 @@ Luego vuelve a main y también a develop
 ## clase D6
 ### titulo:
 ## clase D7
+### titulo: ¿Qué son los Pull Request (PR)?
+Los Pull Request son como una solicitud para unir tu trabajo con el código principal.
+O sea, no subes directo, sino que dices: “hey, quiero agregar esto” y los demás lo revisan antes.
+¿Para qué sirven?
+Sirven más que todo para:
+ver si el código está bien
+evitar errores
+que el equipo opine
+no arruinar el proyecto
+básicamente es como pedir permiso antes de mezclar tu código
+¿Cómo se hace un PR?
+Primero haces tus cambios en una rama y luego:
+
+git push origin rama
+Después vas a GitHub y ahí te sale la opción de crear el PR para unir tu rama con develop o main.
+Flujo más o menos (simplificado)
+Primero te actualizas:
+
+git checkout develop
+git fetch
+git pull origin develop
+Luego creas o usas tu rama:
+
+git checkout -b rama
+Trabajas normal y luego subes:
+
+git push origin rama
+Si hubo cambios en develop, haces merge:
+
+git merge develop
+Si hay errores los arreglas, haces commit y vuelves a subir:
+
+git add .
+git commit
+git push origin rama
+Y recién haces el PR en GitHub
+¿Por qué usar PR?
+Porque si no cualquiera puede subir lo que sea y romper todo xd
+Con PR:
+revisan tu código
+opinan
+se evita meter cosas mal hechas
+es más seguro trabajar así
+
+Y aunque haya PR, igual alguien podría hacer merge sin revisar, entonces se ponen reglas
+tipo que sí o sí alguien revise antes
