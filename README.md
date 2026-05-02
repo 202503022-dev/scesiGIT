@@ -122,7 +122,59 @@ Se corrige rápido
 Luego vuelve a main y también a develop
  Ejemplo: hotfix/error-login
 ## clase D6
-### titulo:
+### titulo:Flujo de trabajo de Git
+¿Qué es git merge?
+Es para juntar ramas osea unes tu rama con otra y se combinan los cambios.
+El --no-ff sirve para que no se pierda el historial, o sea deja marcado que hubo una unión de ramas con un commit.
+¿Qué es git fetch?
+Es como revisar si hay cambios en el repo remoto.
+Los trae, pero no los aplica todavía.
+
+¿Qué es git pull?
+Trae los cambios del repo remoto y los aplica de una vez.
+Ejemplo:
+git pull origin rama
+
+¿Qué es git push?
+Sirve para subir tus cambios al repositorio.
+Ejemplo:
+git push origin rama
+Si no es tu repo, la primera vez usas -u para que ya no moleste después:
+
+git push -u origin rama
+Flujo de trabajo sin PR (más directo)
+Primero te actualizas:
+
+git checkout develop
+git fetch
+git pull origin develop
+Te vas a tu rama:
+
+git checkout -b rama
+Si hubo cambios:
+
+git merge develop
+Trabajas normal y subes:
+
+git push origin rama
+Luego vuelves a develop:
+
+git checkout develop
+git fetch
+git pull origin develop
+Fusionas tu rama:
+
+git merge --no-ff rama
+Si hay conflictos, los arreglas y haces:
+
+git add .
+git commit
+Borras la rama:
+
+git branch -D rama
+Y subes todo:
+
+git push origin develop
 ## clase D7
 ### titulo: ¿Qué son los Pull Request (PR)?
 Los Pull Request son como una solicitud para unir tu trabajo con el código principal.
